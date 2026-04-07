@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Join the Elite - Predator Style</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<header>
+    <div class="logo">
+        <img src="LogoSample_ByTailorBrands.jpg" alt="Logo">
+    </div>
+    <nav> 
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about_us.html">About us</a></li>
+            <li><a href="contact.html">Episodes</a></li>
+            <li><a href="register.html">Create account</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="register-container">
+    <section class="form-card">
+        <h2>Create your Account</h2>
+        <p>Join our community of high performance.</p>
+        
+        <form id="mainRegisterForm">
+            <div class="input-group">
+                <label for="reg-name">Full Name</label>
+                <input type="text" id="reg-name" placeholder="Ej: John Doe" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="reg-email">Email Address</label>
+                <input type="email" id="reg-email" placeholder="email@example.com" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="reg-pass">Password</label>
+                <input type="password" id="reg-pass" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="btn-primary">Sign Up Now</button>
+        </form>
+        <div id="success-msg" class="hidden-msg">
+            🏆 Account created! Welcome to the Predator team.
+        </div>
+    </section>
+</main>
+
+<script>
+    document.getElementById('mainRegisterForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('success-msg').style.display = 'block';
+        this.style.opacity = '0.5';
+        this.style.pointerEvents = 'none';
+    });
+</script>
+
+</body>
+</html>
